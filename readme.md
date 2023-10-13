@@ -1,2 +1,2 @@
-"ivm-view-attr__img-wrapper" "div" ---> img
-"update-components-article__link-container" ---> img, a
+Use BeautifulSoup to scrap the post
+OpenAI API to categorise the post and get tags.
