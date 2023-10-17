@@ -19,6 +19,7 @@ def analyze_linkedin_post(post_text):
         n=1,
         stop=None
     )
+    print(response)
     # Extract the generated response
     generated_text = response.choices[0].text
     # Define regular expressions to match the Category and Tags

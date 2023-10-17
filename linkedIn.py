@@ -15,9 +15,10 @@ def getLinkedInPost(url):
         post['schema'] = data
         # Extract information from the JSON data
         post['schemaType'] = data['@type']
-        post['text'] = data['articleBody']
-        post['image_url'] = data['image']['url'] or None
+        post['text'] = data['articleBody'] if 'articleBody' in data else None
+        post['image_url'] = data['image']['url'] if 'image' in data else None
+        post['video_url'] = data['video']['contentUrl'] if 'video' in data else None
 
         return post
-    except:
-        print("Error")
+    except Exception as e:
+        print("linkedIn=>", e)
