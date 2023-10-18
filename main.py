@@ -29,6 +29,10 @@ def insightLinkedInPost():
                     "image_url": linkedIn['image_url'],
                     "video_url": linkedIn['video_url'],
                     "OpenAIResponse": OpenAIResponse
+                },
+                "headers":{
+                    "Cache-Control": "no-store",
+                    "X-Content-Type-Options": "nosniff",
                 }
             }),
             status=201,
