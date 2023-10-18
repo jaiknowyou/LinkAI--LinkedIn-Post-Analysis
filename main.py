@@ -17,8 +17,8 @@ def hello_world():
 def insightLinkedInPost():
     try:
         linkedIn = getLinkedInPost(request.form['url'])
-        # OpenAIResponse = analyze_linkedin_post(linkedIn['text']) if linkedIn['text'] != None else {'category': None,'tags': None}
-        OpenAIResponse = {}
+        OpenAIResponse = analyze_linkedin_post(linkedIn['text']) if linkedIn['text'] != None else {'category': None,'tags': None}
+        # OpenAIResponse = {}
         print(linkedIn)
         return Response(
             response=json.dumps({
